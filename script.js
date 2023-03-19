@@ -7,7 +7,7 @@ const TurnChanges = () => {
   return turn === "X" ? "0" : "X";
 };
 const checkWin = () => {
-  let boxText = document.querySelector(".boxText");
+  let boxText = document.getElementsByClassName("boxText");
   let wins = [
     [0, 1, 2],
     [3, 4, 5],
@@ -19,15 +19,16 @@ const checkWin = () => {
     [2, 4, 6],
   ];
   wins.forEach((e) => {
-   //  if (
-   //    boxText[e[0]].innerText === boxText[e[1]].innerText &&
-   //    boxText[e[1]].innerText === boxText[e[2]].innerText &&
-   //    boxText[e[0]].innerText !== " "
-   //  ) {
-   //    document.querySelector(".won").innerText ===
-   //      boxText[e[0]].innerText + "WON";
-   //      gameoverturn=true
-   //  }
+    if (
+      (boxText[e[0]].innerText === boxText[e[1]].innerText) &&
+    (  boxText[e[1]].innerText === boxText[e[2]].innerText) &&
+    (  boxText[e[0]].innerText !== "")
+    ) {
+      document.querySelector(".turns").innerText =
+        boxText[e[0]].innerText + "  WON";
+        console.log("won")
+        gameoverturn=true
+    }
   });
 };
 let box = document.getElementsByClassName("box");
@@ -41,9 +42,10 @@ Array.from(box).forEach((elem) => {
 
       ting.play();
       checkWin();
-      if(!gameoverturn){
-         document.getElementsByClassName("turns").innerText = " Turn For " + turn;
-
+      if(gameoverturn===false){
+         document.querySelector(".turns").innerText = " Turn For " + turn;
+         console.log("nwon")
+         
       }
     }
   });
