@@ -21,7 +21,7 @@ color: aliceblue;}
 .container{
     display: flex;
     justify-content: center;
-    background-color: aqua;
+    /* background-color: aqua; */
     padding: 20px;
     
 }
@@ -34,7 +34,30 @@ color: aliceblue;}
     cursor: pointer;
 }
 .box:hover{
-    background-color: rgb(223, 196, 223);
+    background-color: rgb(238, 232, 238);
+}
+img{
+    width: 0;
+    transition:width 1s ease-in-out;
+}
+#reset{
+    width: 10vh;
+    height: 5vh;
+    margin-top: 20px;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 4px;
+}
+.info{
+    width: 40vh;
+    height: 70vh;
+    position: relative;
+    left: 10%;
+    /* margin: 90px; */
+    /* background-color: blue; */
+}
+.turns{
+    font-size:40px;
 }
 .bt-0{
     border-top: 0;

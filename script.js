@@ -28,6 +28,8 @@ const checkWin = () => {
         boxText[e[0]].innerText + "  WON";
         console.log("won")
         gameoverturn=true
+        gameover.play()
+        document.querySelector('.img').getElementsByTagName('img')[0].style.width='270px'
     }
   });
 };
@@ -43,10 +45,22 @@ Array.from(box).forEach((elem) => {
       ting.play();
       checkWin();
       if(gameoverturn===false){
-         document.querySelector(".turns").innerText = " Turn For " + turn;
+         document.querySelector(".turns").innerText = " YOUR TURN " + turn;
          console.log("nwon")
          
       }
     }
   });
 });
+
+reset.addEventListener('click', ()=>{
+   let boxtexts = document.querySelectorAll('.boxText');
+   Array.from(boxtexts).forEach(element => {
+       element.innerText = ""
+   });
+   turn = "X"; 
+   gameoverturn = false
+   document.querySelector(".turns").innerText = " YOUR TURN " + turn;
+   document.querySelector('.img').getElementsByTagName('img')[0].style.width='0px'
+
+})
