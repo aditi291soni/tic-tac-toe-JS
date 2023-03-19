@@ -29,7 +29,7 @@ const checkWin = () => {
         console.log("won")
         gameoverturn=true
         gameover.play()
-        document.querySelector('.img').getElementsByTagName('img')[0].style.width='270px'
+        document.querySelector('.img').getElementsByTagName('img')[0].style.width='90%'
     }
   });
 };

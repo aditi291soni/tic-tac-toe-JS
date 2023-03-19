@@ -21,7 +21,6 @@ color: aliceblue;}
 .container{
     display: flex;
     justify-content: center;
-    /* background-color: aqua; */
     padding: 20px;
     
 }
@@ -44,7 +43,7 @@ img{
     width: 10vh;
     height: 5vh;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 115%;
     border-radius: 5px;
     padding: 4px;
 }
@@ -53,11 +52,9 @@ img{
     height: 70vh;
     position: relative;
     left: 10%;
-    /* margin: 90px; */
-    /* background-color: blue; */
 }
 .turns{
-    font-size:40px;
+    font-size:5vh;
 }
 .bt-0{
     border-top: 0;
@@ -72,3 +69,34 @@ img{
 .bb-0{
     border-bottom: 0;
 } 
+@media only screen and (max-width: 950px) {
+    .container {
+        flex-wrap: wrap;
+        margin-top: 50px;
+    }
+    .gameContainer{
+        
+    grid-template-columns: repeat(3,20vw);
+    grid-template-rows: repeat(3,20vw);
+    }
+    .info{
+        margin-top: 50px;
+    }
+    .turns{
+        font-size: 20px;
+
+    }
+    .box{
+        font-size: 30px;
+    }
+    #reset{
+        font-size: 20px;
+        width: 40vw;
+        height: 6vh;
+        padding: 10px;
+        text-align: center;
+    }
+    .img{
+        width: 150px;
+    }
+  }
